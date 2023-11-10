@@ -46,7 +46,7 @@ contract Assessment {
 
     function revertExample(int _value) view external onlyOwner returns (int){
         // Using revert() to revert the transaction with a custom error message
-        if(_value > 0){
+        if(!(_value > 0)){
             revert("Value must be greater than zero.");
         }
         return _value;
